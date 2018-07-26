@@ -13,3 +13,14 @@
 <button (click)="propiedades.danger = !propiedades.danger" [ngClass]="{'btn-danger': propiedades.danger, 'btn-info': !propiedades.danger}" type="button " name="button " class="btn btn-danger ">
   Cambiar 
 </button>
+
+<br><br>
+<!-- PROCESO ASÍNCRONO -->
+<h3>Proceso asíncrono</h3>
+
+<button class="btn btn-primary" (click)="ejecutar()" type="button" name="button" [disabled]="loading">
+    <!-- Clases de font awesome. fa-spin es para girar el icono-->
+    <i [ngClass]="{'fa-save': !loading, 'fa-refresh fa-spin': loading}" class="fa"></i>
+    <span *ngIf="!loading"> Guardar cambios</span>
+    <span *ngIf="loading"> Guardando</span>
+</button>
