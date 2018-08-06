@@ -1,0 +1,18 @@
+<div class="container">
+
+    <form (ngSubmit)="guardar(formulario)" #formulario="ngForm">
+        <label for="nombre">Nombre</label>
+        <input [(ngModel)]="nombre" type="text" name="nombre" placeholder="Nombre">
+
+        <label for="edad">Edad</label>
+        <input [(ngModel)]="edad" type="number" name="edad" placeholder="Edad">
+
+        <button class="btn btn-outline-primary" type="submit">ENVIAR</button>
+
+    </form>
+
+    <hr>
+
+    <p>Persona</p>
+    {{ formulario.value | json }}
+</div>

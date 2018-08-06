@@ -1,21 +1,25 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { NgStyleComponent } from './components/ng-style/ng-style.component';
 import { CssComponent } from './components/css/css.component';
 import { ClasesComponent } from './components/clases/clases.component';
-import { ResaltadoDirective } from './directivas/resaltado.directive';
 import { NgSwitchComponent } from './components/ng-switch/ng-switch.component';
 import { HomeComponent } from './components/home/home.component';
-
-// Rutas
-import { APP_ROUTING } from './app.routes';
+import { ObservablesComponent } from './components/observables/observables.component';
 import { UsuarioComponent } from './components/usuario/usuario.component';
 import { UsuarioNuevoComponent } from './components/usuario/usuario-nuevo.component';
 import { UsuarioEditarComponent } from './components/usuario/usuario-editar.component';
 import { UsuarioDetalleComponent } from './components/usuario/usuario-detalle.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+
+// Directiva
+import { ResaltadoDirective } from './directivas/resaltado.directive';
+
+// Rutas
+import { APP_ROUTING } from './app.routes';
 
 @NgModule({
   declarations: [
@@ -30,11 +34,13 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     UsuarioNuevoComponent,
     UsuarioEditarComponent,
     UsuarioDetalleComponent,
-    NavbarComponent
+    NavbarComponent,
+    ObservablesComponent
   ],
   imports: [
     BrowserModule,
-    APP_ROUTING
+    APP_ROUTING,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
