@@ -15,4 +15,22 @@
 
     <p>Persona</p>
     {{ formulario.value | json }}
+
+    <div class="container main-container">
+        <h3>Bromas aleatoria</h3>
+        <hr>
+        <button (click)="obtenerBroma()" type="button" class="btn btn-outline-success">Obtener broma</button>
+        <p class="main-container">{{ broma | json }}</p>
+    </div>
+
+    <div class="container main-container">
+        <h3>Nº Bromas</h3>
+        <hr>
+        <form (ngSubmit)="obtenerBromas(formularioBromas)" #formularioBromas="ngForm">
+            <input [(ngModel)]="numeroBromas" name="numeroBromas" type="number" placeholder="Introduce un número de bromas">
+            <button type="submit" class="btn btn-outline-primary">Obtener bromas</button>
+            <p class="main-container">Aquí irán las bromas</p>
+        </form>
+    </div>
+
 </div>

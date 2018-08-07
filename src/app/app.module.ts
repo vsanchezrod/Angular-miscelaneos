@@ -21,6 +21,9 @@ import { ResaltadoDirective } from './directivas/resaltado.directive';
 // Rutas
 import { APP_ROUTING } from './app.routes';
 
+// Peticiones HTTP
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,7 +43,8 @@ import { APP_ROUTING } from './app.routes';
   imports: [
     BrowserModule,
     APP_ROUTING,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
